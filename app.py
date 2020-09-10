@@ -15,6 +15,13 @@ app.config['SECRET_KEY'] = 'Qp-PKPCsNmEOS4A0O6wB6g'
 
 db = SQLAlchemy(app)
 
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'GET':
+        return render_template('index.html')
+    if request.method == 'POST':
+        return redirect(url_for('signup'))
+        return render_template('signup.html')
 
 @app.route('/signup', methods=['GET', 'POST'])
 def signup():
