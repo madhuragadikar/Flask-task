@@ -1,0 +1,30 @@
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Eligibiliy</h1>
+            <hr>
+
+            <form action="/signup/address" method="POST">
+                <div class="form-group">
+                    <lable>Enter your postcode: </lable>
+                    <input class="form-control" type="text" name="postcode">
+
+                    <lable>Address: </lable>
+                    <input class="form-control" type="text" name="address">
+
+                    <label for="country">Country:</label>
+                    <select id="country" name="country">
+                        <option value="uk">UK</option>
+                        <option value="us">US</option>
+                        <option value="in">India</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Validate</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

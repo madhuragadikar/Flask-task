@@ -1,0 +1,21 @@
+{%  block title %} Great! Welcome!{% endblock %}
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Are you?</h1>
+            <hr>
+
+            <form action="/questions" method="POST">
+                <input type="radio" id="male" name="gender" value="M">
+                <label for="male">Male</label><br>
+                <input type="radio" id="female" name="gender" value="F">
+                <label for="female">Female</label><br>
+
+                <button type="submit" class="btn btn-primary">Next</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

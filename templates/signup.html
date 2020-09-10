@@ -1,0 +1,22 @@
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Sign up</h1>
+            <hr>
+
+            <form action="/signup" method="POST">
+                <div class="form-group">
+                    <lable>Enter your email id: </lable>
+                    <input class="form-control" type="text" name="email">
+                    <lable style="color:#ff0000;"> {{ error }} </lable>
+
+                </div>
+
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

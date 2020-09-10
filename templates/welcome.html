@@ -1,0 +1,35 @@
+<html>
+<head>
+    <script type="text/javascript">
+        function check()
+        {
+            if(document.getElementById('first_name').value==NULL || myform.first_name.value.length==0)
+            {
+                document.getElementById('errorname').value="this is an invalid name";
+            }
+        }
+    </script>
+</head>
+</html>
+{% block main %}
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1>Let's know more about you!</h1>
+            <hr>
+
+            <form action="/signup/welcome" method="POST">
+                <div class="form-group">
+                    <lable>First Name</lable>
+                    <input class="form-control" type="text" name="first_name" onblur="check()"/>
+                    <lable>Last Name</lable>
+                    <input class="form-control" type="text" name="last_name">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Next</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
